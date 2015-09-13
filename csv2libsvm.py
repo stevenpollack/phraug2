@@ -10,8 +10,9 @@ import argparse
 
 def construct_line( label, line ):
 	new_line = []
-	if float( label ) == 0.0:
+        if float( label ) == 0.0:
 		label = "0"
+
 	new_line.append( label )
 	
 	for i, item in enumerate( line ):
@@ -47,7 +48,7 @@ if args.skip_headers:
 
 for line in reader:
 	if args.label_index == -1:
-		label = 1
+		label = "1"
 	else:
 		label = line.pop( args.label_index )
 	
